@@ -5,7 +5,6 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AssemblyName>Fuse8_ByteMinds.SummerSchool.Benchmarks</AssemblyName>
         <RootNamespace>Fuse8_ByteMinds.SummerSchool.Benchmarks</RootNamespace>
     </PropertyGroup>
 
