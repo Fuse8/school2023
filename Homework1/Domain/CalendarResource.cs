@@ -1,54 +1,69 @@
-﻿namespace Fuse8_ByteMinds.SummerSchool.Domain;
+using System;
+using System.Reflection;
 
-/// <summary>
-/// Значения ресурсов для календаря
-/// </summary>
-public class CalendarResource
+namespace Fuse8_ByteMinds.SummerSchool.Domain
 {
-	public static readonly CalendarResource Instance = new();
+    public class CalendarResource
+    {
+        public static readonly CalendarResource Instance = new();
 
-	public static readonly string January = GetMonthByNumber(0);
-	public static readonly string February = GetMonthByNumber(1);
+        public static readonly string January;
+        public static readonly string February;
 
-	private static readonly string[] MonthNames;
+        public static string[] MonthNames;
 
-	static CalendarResource()
-	{
-		MonthNames = new[]
-		{
-			"Январь",
-			"Февраль",
-			"Март",
-			"Апрель",
-			"Май",
-			"Июнь",
-			"Июль",
-			"Август",
-			"Сентябрь",
-			"Октябрь",
-			"Ноябрь",
-			"Декабрь",
-		};
-	}
+        static CalendarResource()
+        {
+            MonthNames = new[]
+            {
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь",
+            };
 
-	private static string GetMonthByNumber(int number)
-		=> MonthNames[number];
+            January = GetMonthByNumber(0);
+            February = GetMonthByNumber(1);
+        }
 
-	// ToDo реализовать индексатор для получения названия месяца по енаму Month
-}
+        private static string GetMonthByNumber(int number)
+            => MonthNames[number];
 
-public enum Month
-{
-	January,
-	February,
-	March,
-	April,
-	May,
-	June,
-	July,
-	August,
-	September,
-	October,
-	November,
-	December,
+     
+        public string this[Month month]
+        {
+            get
+            {
+                int monthNumber = (int)month;
+                if (monthNumber >= 0 && monthNumber < MonthNames.Length)
+                    return MonthNames[monthNumber];
+                else
+                    throw new ArgumentOutOfRangeException("Invalid Month value.");
+            }
+        }
+    }
+
+    public enum Month
+    {
+        January,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December,
+    }
 }
