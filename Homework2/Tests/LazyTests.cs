@@ -50,6 +50,16 @@ public class LazyTests
 		Assert.Equal(expected: 1, actual: funcCallCount);
 	}
 
+	[Fact(DisplayName = "Если Value не запрошивалось, то экшен для создание значения не вызывается")]
+	public void FuncNotCallIfValueNotGet()
+	{
+		// Используем замыкание, чтобы подсчитать кол-во вызовов
+		int funcCallCount = 0;
+		var lazy = new Domain.Lazy<int>(() => ++funcCallCount);
+
+		Assert.Equal(expected: 0, actual: funcCallCount);
+	}
+
 	[Fact(DisplayName = "Value работает правильно со значением null для типа int")]
 	public void ValueWorksForTypeIntThatNull()
 	{
