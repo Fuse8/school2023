@@ -12,9 +12,9 @@
 Каждое задание будет располагаться в отдельной директории Homework\<N>. Для каждого задания будет ReadMe с описанием.
 - Результаты – зачет/незачет за каждый пункт.
 - Формат выполнения: закрытый репозиторий в github.
-- После создания репозитория, необходимо пригласить в качестве конртибьютеров @fedorkiselev и @Sewasale
+- После создания репозитория, необходимо пригласить в качестве конртибьютеров [@abushmeleva](https://github.com/abushmeleva), [@fedorkiselev](https://github.com/fedorkiselev) и [@Sewasale](https://github.com/Sewasale)
 - Для каждого задания создавайте отдельную ветку в своем репозитории
-- Для отправки на проверку, создайте Pull Request из ветки с заданием в ветку main, в комменте необходимо тэгнуть @fedorkiselev и @Sewasale
+- Для отправки на проверку, создайте Pull Request из ветки с заданием в ветку main, в комменте необходимо тэгнуть [@abushmeleva](https://github.com/abushmeleva), [@fedorkiselev](https://github.com/fedorkiselev) и [@Sewasale](https://github.com/Sewasale)
 
 
 <details>
